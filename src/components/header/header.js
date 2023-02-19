@@ -6,18 +6,12 @@ import AVATAR_IMG from "../../images/avatar.jpg";
 
 const styles = {
   header: {
-    height: "40px",
+    height: ["40px", "60px", "80px"],
     width: "100%",
-    "@media screen and (min-width: 768px)": {
-      height: "80px",
-    },
   },
   logo: {
-    fontSize: 3,
+    fontSize: [3, 5],
     fontWeight: "heading",
-    "@media screen and (min-width: 768px)": {
-      fontSize: 5,
-    },
   },
   wrapper: {
     width: "100%",
@@ -27,11 +21,8 @@ const styles = {
     alignItems: "center",
   },
   navigationWrapper: {
-    display: "none",
+    display: ["none", "flex"],
     alignItems: "center",
-    "@media screen and (min-width: 768px)": {
-      display: "flex",
-    },
   },
   avatar: {
     marginLeft: "16px",
@@ -39,9 +30,7 @@ const styles = {
     width: "56px",
   },
   menuButton: {
-    "@media screen and (min-width: 768px)": {
-      display: "none",
-    },
+    display: [null, "none"],
   },
 };
 

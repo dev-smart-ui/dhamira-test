@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react";
+import { Fragment } from "react";
 import { Box, Global, jsx } from "theme-ui";
 import { globalStyles } from "../../gatsby-plugin-theme-ui/globalStyles";
 import Header from "../header/header";
@@ -16,13 +16,13 @@ const styles = {
 
 export const Layout = ({ children }) => {
   return (
-    <>
+    <Fragment>
       <Global styles={globalStyles} />
       <Box sx={styles.layout}>
         <Header />
         <Content>{children}</Content>
         <Footer />
       </Box>
-    </>
+    </Fragment>
   );
 };

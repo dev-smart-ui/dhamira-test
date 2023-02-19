@@ -8,15 +8,12 @@ const styles = {
   footer: {
     color: "text",
     backgroundColor: "primary",
-    height: "40px",
+    height: ["40px", "80px"],
     width: "100%",
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
     variant: "styles.footer",
-    "@media screen and (min-width: 768px)": {
-      height: "80px",
-    },
   },
 };
 
