@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Avatar, Box, MenuButton, jsx } from "theme-ui";
 import { Navigation } from "../navigation/navigation";
-import { Container } from "../container/container";
 import AVATAR_IMG from "../../images/avatar.jpg";
 
 const styles = {
@@ -25,9 +24,8 @@ const styles = {
     alignItems: "center",
   },
   avatar: {
-    marginLeft: "16px",
-    height: "56px",
-    width: "56px",
+    height: "50px",
+    width: "50px",
   },
   menuButton: {
     display: [null, "none"],
@@ -37,16 +35,14 @@ const styles = {
 export default function Header() {
   return (
     <header sx={styles.header}>
-      <Container>
-        <Box sx={styles.wrapper}>
-          <div sx={styles.logo}>My App</div>
-          <Box sx={styles.navigationWrapper}>
-            <Navigation />
-            <Avatar src={AVATAR_IMG} alt="avatar" sx={styles.avatar} />
-          </Box>
-          <MenuButton aria-label="Toggle Menu" sx={styles.menuButton} />
+      <Box sx={styles.wrapper}>
+        <div sx={styles.logo}>My App</div>
+        <Box sx={styles.navigationWrapper}>
+          <Navigation />
+          <Avatar src={AVATAR_IMG} alt="avatar" sx={styles.avatar} />
         </Box>
-      </Container>
+        <MenuButton aria-label="Toggle Menu" sx={styles.menuButton} />
+      </Box>
     </header>
   );
 }

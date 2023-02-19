@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-
 import { Link } from "gatsby";
 
 export const navigation = [
@@ -25,8 +24,14 @@ const styles = {
   listWrapper: {
     display: "flex",
     alignItems: "center",
-    gap: 3,
+    gap: [null, 2, 3, 4],
     height: "28px",
+    marginRight: [null, 2, 3, 4],
+  },
+  listItem: {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
   },
   active: {
     color: "inherit",
@@ -60,7 +65,7 @@ export const Navigation = () => {
     <ul sx={styles.listWrapper}>
       {navigation.map(({ name, path, active }) => {
         return (
-          <li sx={{ height: "100%", display: "flex", alignItems: "center" }}>
+          <li sx={styles.listItem}>
             <Link
               key={name}
               to={path}
