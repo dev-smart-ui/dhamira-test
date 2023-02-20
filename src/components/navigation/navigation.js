@@ -23,17 +23,20 @@ export const navigation = [
 const styles = {
   listWrapper: {
     display: "flex",
-    alignItems: "center",
-    gap: [null, 2, 3, 4],
-    height: "28px",
+    flexDirection: ["column", "row"],
+    alignItems: ["left", "center"],
+    gap: [2, 2, 3, 4],
     marginRight: [null, 2, 3, 4],
+    width: ["100%", null],
+    mt: [2, 0],
   },
   listItem: {
     height: "100%",
     display: "flex",
     alignItems: "center",
+    borderBottom: ["1px solid black", "none"],
   },
-  active: {
+  btn: {
     color: "inherit",
     display: "inline-block",
     position: "relative",
@@ -42,21 +45,25 @@ const styles = {
     "&.active": {
       color: "accent",
       cursor: "none",
-      "::after": {
-        content: '""',
-        position: "absolute",
-        left: "0",
-        bottom: "0",
-        width: "100%",
-        height: "2px",
-        backgroundColor: "accent",
-        zIndex: "10",
-      },
+      "::after": [
+        null,
+        {
+          content: '""',
+          position: "absolute",
+          left: "0",
+          bottom: "0",
+          width: "100%",
+          height: "2px",
+          backgroundColor: "accent",
+          zIndex: "10",
+        },
+      ],
     },
   },
   disabled: {
     pointerEvents: "none",
     color: "lightGray",
+    py: 2,
   },
 };
 
@@ -64,14 +71,12 @@ export const Navigation = () => {
   return (
     <ul sx={styles.listWrapper}>
       {navigation.map(({ name, path, active }) => {
+        const btnStyles = active
+          ? styles.btn
+          : { ...styles.btn, ...styles.disabled };
         return (
           <li sx={styles.listItem}>
-            <Link
-              key={name}
-              to={path}
-              activeClassName="active"
-              sx={active ? styles.active : styles.disabled}
-            >
+            <Link key={name} to={path} activeClassName="active" sx={btnStyles}>
               {name}
             </Link>
           </li>

@@ -11,6 +11,7 @@ const styles = {
     flexDirection: "column",
     minHeight: "100vh",
     gap: [1, null, 3],
+    width: "100%",
   },
   content: {
     width: "100%",
@@ -34,7 +35,7 @@ export const Layout = ({ children }) => {
   return (
     <Container>
       <Global styles={globalStyles} />
-      <Box sx={styles.layout}>
+      <div sx={styles.layout}>
         <Header />
         <div sx={styles.content}>
           <div sx={styles.inside}>
@@ -42,7 +43,7 @@ export const Layout = ({ children }) => {
           </div>
         </div>
         <Footer />
-      </Box>
+      </div>
     </Container>
   );
 };

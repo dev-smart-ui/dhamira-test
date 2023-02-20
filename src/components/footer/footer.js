@@ -22,6 +22,7 @@ const styles = {
   },
   linkList: {
     display: "flex",
+    flexWrap: "wrap",
     gap: [2, 3, 4],
   },
   licence: {

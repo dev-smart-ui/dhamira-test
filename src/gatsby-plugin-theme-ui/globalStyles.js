@@ -10,6 +10,7 @@ export const globalStyles = {
     border: 0,
     boxSizing: "border-box",
     fontFamily: "body",
+    overflowX: "hidden",
   },
   div: {
     boxSizing: "border-box",
@@ -30,6 +31,10 @@ export const globalStyles = {
     m: 0,
     p: 0,
   },
+  button: {
+    border: 0,
+    p: 0,
+  },
   li: {
     m: 0,
     p: 0,
@@ -39,5 +44,8 @@ export const globalStyles = {
     boxSizing: "border-box",
     m: 0,
     p: 0,
+  },
+  nav: {
+    boxSizing: "border-box",
   },
 };
