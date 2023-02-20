@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Global, jsx } from "theme-ui";
+import { Global, jsx } from "theme-ui";
 import { globalStyles } from "../../gatsby-plugin-theme-ui/globalStyles";
 import Header from "../header/header";
 import { Footer } from "../footer/footer";

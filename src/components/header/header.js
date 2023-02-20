@@ -30,12 +30,12 @@ const styles = {
     right: 0,
     backgroundColor: "primary",
     zIndex: 2,
-    transform: "translateX(-100%)",
+    transform: ["translateX(-100%)", "none"],
     transition: "transform 0.3s",
     overflowY: "auto",
     p: [3, 0],
     active: {
-      transform: "translateX(0)",
+      transform: ["translateX(0)"],
     },
   },
   avatar: {
@@ -60,7 +60,7 @@ const styles = {
 };
 
 export default function Header() {
-  const { isOpen, onClose, onToggle } = useOpen(false);
+  const { isOpen, onToggle } = useOpen(false);
 
   const activeNav = isOpen
     ? { ...styles.navigationWrapper, ...styles.navigationWrapper.active }
